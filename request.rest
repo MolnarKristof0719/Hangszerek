@@ -1,0 +1,50 @@
+### változók
+@protocol = http://
+@hostname = localhost
+@port = 80
+@mappa = phpalapok/07_API
+@host = {{protocol}}{{hostname}}:{{port}}/{{mappa}}
+
+
+### hangszerek
+GET {{host}}/api/instruments
+
+### hangszer by id
+GET {{host}}/api/instruments/8
+
+### hangszer post
+POST {{host}}/api/instruments
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name": "hegedű",
+    "description": "blabla",
+    "brand": "brand",
+    "price": 2000,
+    "quantity": 10
+}
+
+### delete hangszer by id
+DELETE {{host}}/api/instruments/9
+
+
+### hangszer postpatch
+PATCH {{host}}/api/instruments/8
+Accept: application/json
+Content-Type: application/json
+
+{
+    "name":"Troublemaker Telecaster",
+    "description":"Quisque vel tellus nec leo vestibulum molestie. Donec fringilla urna non erat dictum posuere. Nullam luctus convallis facilisis. Praesent elementum varius metus sit amet elementum. Praesent vitae leo non sapien rutrum elementum. Aenean eget hendrerit turpis. Morbi in sagittis quam, varius finibus nisi. Sed eu mi malesuada, semper felis eu, rutrum tellus. Quisque rutrum id dui vitae luctus. Praesent vehicula cursus mollis.",
+    "brand":"Fender",
+    "price":469990,
+    "quantity":3
+}
+### lekerdezesek
+
+###hangszernev es id abc sorrendben
+
+GET {{host}}/api/instrumentsabc
+
+
